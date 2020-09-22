@@ -27,17 +27,11 @@ const Home = () => {
         ) : (
           <div>{slip.advice}</div>
         )}
-        <div className="btn-grpaa center-align">
-          <button
-            className="waves-effect waves-light btn-small center-align"
-            onClick={() => dispatch(fetchAdvice())}
-          >
+        <div>
+          <button className="btn-m" onClick={() => dispatch(fetchAdvice())}>
             <span>GIVE ME ADVICE!</span>
           </button>
-          <button
-            className="waves-effect waves-light btn-small center-align"
-            onClick={() => dispatch(likeAdvice(slip))}
-          >
+          <button className="btn-m" onClick={() => dispatch(likeAdvice(slip))}>
             <span>Like!</span>
           </button>
         </div>
