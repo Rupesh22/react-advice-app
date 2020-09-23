@@ -10,12 +10,12 @@ const Like = () => {
       <Header />
       <div className="like-home">
         <div>Like Page</div>
-        <ul>
+        <ul className="card-container">
           {likedOnes.length === 0
             ? "no liked advices"
             : likedOnes.map((liked) => {
                 return (
-                  <li className="card-panel teal lighten-2" key={liked.id}>
+                  <li className="card-m" key={liked.id}>
                     {liked.advice}
                   </li>
                 );
