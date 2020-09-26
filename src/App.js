@@ -9,7 +9,6 @@ function App() {
     // Move from materialize to tail-wind CSS
     // make error page
     // react-reval for likes page
-    // Fix duplicate like's
     <Provider store={store}>
       <div className="app">
         <Main />

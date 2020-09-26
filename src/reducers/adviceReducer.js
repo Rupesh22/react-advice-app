@@ -9,7 +9,13 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
     case LIKE_ADVICE: {
-      return { ...state, likes: [...state.likes, action.payload] };
+      if (
+        state.likes.filter((like) => like.id == action.payload.id).length == 0
+      ) {
+        return { ...state, likes: [...state.likes, action.payload] };
+      } else {
+        return state;
+      }
     }
     case FETCH_ADVICE: {
       // console.log("reducer ran");

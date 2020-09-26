@@ -1,10 +1,8 @@
 import React from "react";
-// import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    // <Fade right duration={1000} distance="20px">
     <div className="nav-bar nav-bar-secondary nav-bar-fixed">
       <div className="app-title">Advice app</div>
       <div>
