@@ -10,7 +10,7 @@ export default function (state = initialState, action) {
   switch (action.type) {
     case LIKE_ADVICE: {
       if (
-        state.likes.filter((like) => like.id == action.payload.id).length == 0
+        state.likes.filter((like) => like.id === action.payload.id).length === 0
       ) {
         return { ...state, likes: [...state.likes, action.payload] };
       } else {

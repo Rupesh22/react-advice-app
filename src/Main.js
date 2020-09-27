@@ -5,7 +5,7 @@ import Home from "./components/Home";
 
 const Main = () => {
   return (
-    <div>
+    <>
       <HashRouter basename="/">
         <Switch>
           <Route path="/" exact component={() => <Home />} />
@@ -13,7 +13,7 @@ const Main = () => {
           <Route path="/like" exact component={() => <Like />} />
         </Switch>
       </HashRouter>
-    </div>
+    </>
   );
 };
 
