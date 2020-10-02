@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+import NavBar from "./NavBar";
 import { useSelector } from "react-redux";
 
 const Like = () => {
@@ -7,7 +7,7 @@ const Like = () => {
   console.log(likedOnes);
   return (
     <>
-      <Header />
+      <NavBar />
       <div className="like-home">
         <div>Like Page</div>
         <ul className="card-container">
