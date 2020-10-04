@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "./NavBar";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { FETCH_LIKES } from "../actions/types";
 
 const Like = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({
+      type: FETCH_LIKES,
+    });
+  }, [dispatch]);
+
   const likedOnes = useSelector((state) => state.advice.likes);
-  console.log(likedOnes);
   return (
     <>
       <NavBar />

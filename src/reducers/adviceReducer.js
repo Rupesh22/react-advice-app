@@ -1,4 +1,10 @@
-const { LIKE_ADVICE, FETCH_ADVICE, IS_LOADING } = require("../actions/types");
+import Storage from "../localStorage.js";
+const {
+  LIKE_ADVICE,
+  FETCH_ADVICE,
+  IS_LOADING,
+  FETCH_LIKES,
+} = require("../actions/types");
 
 const initialState = {
   slip: [],
@@ -9,17 +15,11 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
     case LIKE_ADVICE: {
-      if (
-        state.likes.filter((like) => like.id === action.payload.id).length === 0
-      ) {
-        return { ...state, likes: [...state.likes, action.payload] };
-      } else {
-        return state;
-      }
+      const allLikes = Storage.getLikes();
+      return { ...state, likes: [...allLikes] };
     }
     case FETCH_ADVICE: {
-      // console.log("reducer ran");
-      // console.log(action.payload);
+      console.log("FETCH_ADVICE ran");
       return {
         ...state,
         slip: action.payload,
@@ -28,6 +28,11 @@ export default function (state = initialState, action) {
     }
     case IS_LOADING: {
       return { ...state, isLoading: true };
+    }
+    case FETCH_LIKES: {
+      console.log("FETCH_LIKES ran");
+      const allLikes = Storage.getLikes();
+      return { ...state, likes: [...allLikes] };
     }
 
     default:
