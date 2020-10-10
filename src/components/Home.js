@@ -33,7 +33,9 @@ const Home = () => {
             <span>GIVE ME ADVICE!</span>
           </button>
           <button className="btn-m" onClick={() => dispatch(likeAdvice(slip))}>
-            <span>Like!</span>
+            <span role="img" aria-label="like">
+              Like! ❤️
+            </span>
           </button>
         </div>
       </div>

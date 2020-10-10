@@ -6,9 +6,7 @@ import store from "./store/store";
 
 function App() {
   return (
-    // Move from materialize to tail-wind CSS
     // make error page
-    // react-reval for likes page
     <Provider store={store}>
       <div className="app">
         <Main />
