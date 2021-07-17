@@ -2,7 +2,6 @@ import { FETCH_ADVICE, IS_LOADING } from "./types";
 import axios from "axios";
 
 export const fetchAdvice = () => (dispatch) => {
-  console.log(" action ran");
   dispatch({ type: IS_LOADING });
   axios
     .get(`https://api.adviceslip.com/advice`)
