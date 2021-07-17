@@ -4,7 +4,9 @@ import { NavLink, Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="nav-bar nav-bar-secondary nav-bar-fixed">
-      <div className="app-title">Advice app</div>
+      <div data-testid="app-title" className="app-title">
+        Advice app
+      </div>
       <div>
         <ul className="nav-items">
           <li>

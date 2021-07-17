@@ -19,7 +19,6 @@ export default function (state = initialState, action) {
       return { ...state, likes: [...allLikes] };
     }
     case FETCH_ADVICE: {
-      console.log("FETCH_ADVICE ran");
       return {
         ...state,
         slip: action.payload,
